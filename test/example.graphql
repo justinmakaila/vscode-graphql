@@ -19,6 +19,7 @@ query SomeQuery(
 }
 
 query HeroNameAndFriends($episode: Episode = "JE\nDI\u00A9") {
+  """ This is a multiline comment """
   hero(episode: $episode) {
     name
     enums(s: ENUM)

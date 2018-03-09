@@ -1,5 +1,6 @@
 {
-  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "$schema":
+    "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "GraphQL",
   "patterns": [
     {
@@ -29,8 +30,17 @@
   ],
   "repository": {
     "comment": {
-      "name": "comment.line.number-sign.graphql",
-      "match": "#.*$"
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.graphql",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.double-quote.graphql",
+          "begin": "\"\"\"",
+          "end": "\"\"\""
+        }
+      ]
     },
     "string": {
       "name": "string.quoted.double",
@@ -99,7 +109,8 @@
     },
     "type-declaration": {
       "name": "meta.type-declaration.graphql",
-      "begin": "(type|interface)\\s+([_A-Za-z][_0-9A-Za-z]+)\\s+((@)\\s*([_A-Za-z][_0-9A-Za-z]*))?\\s*\\{",
+      "begin":
+        "(type|interface)\\s+([_A-Za-z][_0-9A-Za-z]+)\\s+((@)\\s*([_A-Za-z][_0-9A-Za-z]*))?\\s*\\{",
       "end": "\\}",
       "beginCaptures": {
         "1": {

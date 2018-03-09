@@ -16,7 +16,9 @@
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
-  "categories": ["Languages"],
+  "categories": [
+    "Languages"
+  ],
   "contributes": {
     "configuration": {
       "title": "GraphQL Configuration",
@@ -31,8 +33,13 @@
     "languages": [
       {
         "id": "graphql",
-        "aliases": ["GraphQL", "graphql"],
-        "extensions": [".graphql"],
+        "aliases": [
+          "GraphQL",
+          "graphql"
+        ],
+        "extensions": [
+          ".graphql"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -44,7 +51,9 @@
       }
     ]
   },
-  "activationEvents": ["onLanguage:graphql"],
+  "activationEvents": [
+    "onLanguage:graphql"
+  ],
   "main": "./bin/client/extension",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
